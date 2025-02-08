@@ -29,7 +29,7 @@ function consoleBootup() {
     client.once('ready', () => {
         client.user.setPresence({
             activity: {
-                name: `/help`
+                name: `43PM sucks`
             },
             status: 'online'
         });
@@ -89,7 +89,7 @@ function login() {
     const configHelper = require('./helpers/config');
     const activeToken = configHelper.activeToken();
     client.login(activeToken).then(() => {
-        client.user?.setActivity('/help', { type: ActivityType.Listening });
+        client.user?.setActivity('43PM sucks', { type: ActivityType.Playing });
     });
 }
 

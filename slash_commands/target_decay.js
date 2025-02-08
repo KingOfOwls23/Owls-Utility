@@ -99,7 +99,14 @@ async function execute(interaction) {
         }
         return true
     });
-    return await interaction.reply(`🕒 ${TileName} is expected to reach a score of **${num_target_score}** on <t:${CurrentTime+remaining_hours_data*3600+MinutesPassed*60}>`)
+    if (CurrentTime > 0) {
+        return await interaction.reply(`🕒 ${TileName} is expected to reach a score of **${num_target_score}** on <t:${CurrentTime+remaining_hours_data*3600+MinutesPassed*60}>`)
+    }
+    else {
+        return await interaction.reply(`🕒 ${TileName} is expected to **NEVER** reach a score of **${num_target_score}**`)
+    }
+         
+    
     //table += '```';
 
     //const embed = new Discord.EmbedBuilder().setDescription(table).setColor(lightgreen);
