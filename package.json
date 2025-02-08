@@ -12,7 +12,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/hemisemidemipresent/cyberquincy.git"
+        "url": "git+https://github.com/KingOfOwls23/Owls-Utility.git"
     },
     "keywords": [
         "btd6",
@@ -23,12 +23,12 @@
     "author": "hemidemisemipresent",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/hemisemidemipresent/cyberquincy/issues"
+        "url": "https://github.com/KingOfOwls23/Owls-Utility/issues"
     },
     "engines": {
         "node": "18.x"
     },
-    "homepage": "https://github.com/hemisemidemipresent/cyberquincy#readme",
+    "homepage": "https://github.com/KingOfOwls23/Owls-Utility/tree/main",
     "dependencies": {
         "@discordjs/builders": "^0.15.0",
         "@discordjs/rest": "^0.2.0-canary.0",
