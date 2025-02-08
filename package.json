@@ -1,0 +1,48 @@
+{
+    "name": "cyberquincy",
+    "version": "1.19.4",
+    "description": "A discord bot for btd6",
+    "main": "server.js",
+    "scripts": {
+        "register": "node register",
+        "test": "npm run register && node server.js",
+        "commit": "git add . && git commit -m p",
+        "deploy": "npm run register && npm run commit && npm run push && npm run logs",
+        "refresh": "del /f package-lock.json && npm install"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hemisemidemipresent/cyberquincy.git"
+    },
+    "keywords": [
+        "btd6",
+        "btd",
+        "discord",
+        "bot"
+    ],
+    "author": "hemidemisemipresent",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/hemisemidemipresent/cyberquincy/issues"
+    },
+    "engines": {
+        "node": "18.x"
+    },
+    "homepage": "https://github.com/hemisemidemipresent/cyberquincy#readme",
+    "dependencies": {
+        "@discordjs/builders": "^0.15.0",
+        "@discordjs/rest": "^0.2.0-canary.0",
+        "@ltd/j-toml": "^1.38.0",
+        "axios": "^1.7.9",
+        "cheerio": "^1.0.0",
+        "discord-api-types": "^0.26.1",
+        "discord.js": "^14.17.3",
+        "filepath": "^1.1.0",
+        "fuzzyset.js": "^1.0.7",
+        "lex": "^1.7.9",
+        "pluralize": "^8.0.0"
+    },
+    "devDependencies": {
+        "eslint": "^8.51.0"
+    }
+}
