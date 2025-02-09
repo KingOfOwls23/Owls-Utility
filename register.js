@@ -42,6 +42,7 @@ async function registerCommands() {
     slashCommandCenter = require('./slash_command_center');
 
     const rest = new REST({ version: '9' }).setToken(activeToken());
+    console.log(testing)
     if (testing) {
         const commands = slashCommandCenter.commandFiles().map(getCommandBody);
         await rest
