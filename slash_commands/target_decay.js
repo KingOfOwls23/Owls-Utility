@@ -89,11 +89,17 @@ async function execute(interaction) {
         let decayedScore = Math.round(obj.mult * num_score);
         console.log(`${obj.h} | ${decayedScore}`)
         table += `${decayedScore}\n`;
+        let n = 1
+
         if (decayedScore >= target_score) {
             table += `Decays passed: ${HoursPassed}, Minutes to next decay: ${MinutesPassed}\n`;
-            console.log(Date.now() / 1000, 72-obj.h-HoursPassed-1, obj.h, HoursPassed)
+            console.log(`[DEBUG] Decays passed: ${HoursPassed}, Minutes to next decay: ${MinutesPassed}, \n`)
+            console.log(Date.now() / 1000, 72-obj.h-HoursPassed-n, obj.h, HoursPassed)
             CurrentTime = Math.floor(Date.now() / 1000);
-            remaining_hours_data = 72-obj.h-HoursPassed-1
+            remaining_hours_data = 72-obj.h-HoursPassed-n
+            if (MinutesPassed === 0) {
+                remaining_hours_data = Math.max(0, remaining_hours_data); // Ensure it never goes negative
+            }
             table += `Timestamp: <t:${CurrentTime+remaining_hours_data*3600+MinutesPassed*60}>`
             return false
         }
